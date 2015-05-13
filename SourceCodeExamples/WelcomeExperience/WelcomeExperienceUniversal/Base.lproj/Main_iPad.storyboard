@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--I Pad Experience View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="iPadExperienceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xB0-G9-vXF"/>
+                        <viewControllerLayoutGuide type="bottom" id="TBc-aQ-mrP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-mh-CT6" userLabel="phoneView">
+                                <rect key="frame" x="-640" y="99" width="1664" height="570"/>
+                                <subviews>
+                                    <view alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPy-xo-2S6" userLabel="leftSideViewCover">
+                                        <rect key="frame" x="0.0" y="0.0" width="672" height="570"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYP-nP-Lc4" userLabel="openingView">
+                                        <rect key="frame" x="672" y="0.0" width="320" height="570"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPL-9Q-CCA" userLabel="rightSideCover">
+                                        <rect key="frame" x="992" y="0.0" width="672" height="570"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y79-Gi-uE0" customClass="AnimationCanvasView">
+                                <rect key="frame" x="32" y="99" width="960" height="570"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="640" translatesAutoresizingMaskIntoConstraints="NO" id="CAa-YT-BSK">
+                                <rect key="frame" x="30" y="715" width="644" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="640" id="PuP-Xw-Kx4"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ogQ-7c-I8q"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIZ-T9-xTL">
+                                <rect key="frame" x="717" y="716" width="51" height="31"/>
+                                <connections>
+                                    <action selector="phoneSwitchStateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tJf-Aa-CBt"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Screen View Off / On" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf1-6g-hGQ">
+                                <rect key="frame" x="775" y="722" width="224" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slide to Animate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea1-f1-gep">
+                                <rect key="frame" x="62" y="747" width="205" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CAa-YT-BSK" firstAttribute="leading" secondItem="Y79-Gi-uE0" secondAttribute="leading" id="2or-6b-npI"/>
+                            <constraint firstItem="CAa-YT-BSK" firstAttribute="top" secondItem="Y79-Gi-uE0" secondAttribute="bottom" constant="46" id="3Zk-k3-xaj"/>
+                            <constraint firstItem="Y79-Gi-uE0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JDT-nz-cCQ"/>
+                            <constraint firstAttribute="bottom" secondItem="CAa-YT-BSK" secondAttribute="bottom" constant="20" symbolic="YES" id="ay8-E3-FR0"/>
+                            <constraint firstItem="Y79-Gi-uE0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="ea7-vD-DQs"/>
+                            <constraint firstItem="Y79-Gi-uE0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hOf-hW-lAs"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="animationCanvasView" destination="Y79-Gi-uE0" id="0Ai-Uf-utD"/>
+                        <outlet property="phoneSwitch" destination="MIZ-T9-xTL" id="Crc-kD-yyV"/>
+                        <outlet property="phoneView" destination="nzK-mh-CT6" id="0es-cY-BwK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="p7j-r8-3Kf">
+            <objects>
+                <viewController storyboardIdentifier="dummyID" id="yLh-Ma-l6R" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aHb-1Z-eZi"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8z-lu-uJs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nXm-zL-vOu">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5j-QN-fmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mCd-bk-G7W">
+            <objects>
+                <viewController storyboardIdentifier="placeHolderID1" id="wjM-WA-qQe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ONE-wa-UTK"/>
+                        <viewControllerLayoutGuide type="bottom" id="hYE-yw-cdz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EeU-fI-R1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxb-bH-kH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
