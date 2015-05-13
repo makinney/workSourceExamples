@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Multii Label View Controller - First-->
+        <scene sceneID="W3I-pn-N6e">
+            <objects>
+                <viewController title="First" id="CZ4-MO-1fc" customClass="MultiiLabelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s9W-kb-ARv"/>
+                        <viewControllerLayoutGuide type="bottom" id="dtj-EO-iXF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa" userLabel="ViewMain">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wob-sN-Hti" userLabel="LabelA">
+                                <rect key="frame" x="25" y="50" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PXg-5j-sKc"/>
+                                    <constraint firstAttribute="width" constant="270" id="hjo-Jg-eSi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UM-4n-WWO" userLabel="LabelB">
+                                <rect key="frame" x="25" y="110" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HPg-hl-yFC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyt-sm-6vO" userLabel="LabelC">
+                                <rect key="frame" x="25" y="170" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ekd-A7-hQO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e5M-Mx-Dlo" userLabel="SegCtrl - ScrollType">
+                                <rect key="frame" x="25" y="230" width="270" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="88T-2s-BSE"/>
+                                    <constraint firstAttribute="height" constant="28" id="Iax-2C-y60"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Up"/>
+                                    <segment title="Down"/>
+                                    <segment title="Up / Down"/>
+                                </segments>
+                                <connections>
+                                    <action selector="scrollDirectionSelectedChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="Oso-mK-YDY"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M5m-k7-dtG" userLabel="SegCntrl - DataSource">
+                                <rect key="frame" x="70" y="338" width="180" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="EKE-cu-MiC"/>
+                                    <constraint firstAttribute="width" constant="180" id="iDm-CE-GXG"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Xoom"/>
+                                    <segment title="Countries"/>
+                                </segments>
+                                <connections>
+                                    <action selector="dataSourceSelectedChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="oR7-Fp-7BV"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ztx-EA-zed" userLabel="Rate Slider">
+                                <rect key="frame" x="23" y="283" width="274" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="Gpk-je-z7v"/>
+                                    <constraint firstAttribute="height" constant="30" id="vYG-J1-lYn"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="rateSliderChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="AIQ-PX-Dw7"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6VS-BQ-duB" userLabel="SegControl - DisplayMode">
+                                <rect key="frame" x="70" y="391" width="180" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Debug"/>
+                                </segments>
+                                <connections>
+                                    <action selector="normalDebugModeChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="K4T-Jr-bVk"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6VS-BQ-duB" secondAttribute="centerX" id="5YF-G8-uv1"/>
+                            <constraint firstItem="0UM-4n-WWO" firstAttribute="top" secondItem="wob-sN-Hti" secondAttribute="bottom" constant="30" id="7Ag-F3-VZR"/>
+                            <constraint firstItem="0UM-4n-WWO" firstAttribute="width" secondItem="wob-sN-Hti" secondAttribute="width" id="8Ot-rb-1a7"/>
+                            <constraint firstItem="dyt-sm-6vO" firstAttribute="width" secondItem="wob-sN-Hti" secondAttribute="width" id="CXq-XA-HNg"/>
+                            <constraint firstItem="M5m-k7-dtG" firstAttribute="width" secondItem="6VS-BQ-duB" secondAttribute="width" id="EiU-4b-2kI"/>
+                            <constraint firstAttribute="centerX" secondItem="M5m-k7-dtG" secondAttribute="centerX" id="KFE-2f-cu0"/>
+                            <constraint firstItem="wob-sN-Hti" firstAttribute="top" secondItem="s9W-kb-ARv" secondAttribute="bottom" constant="30" id="P1N-ac-pdq"/>
+                            <constraint firstItem="Ztx-EA-zed" firstAttribute="top" secondItem="e5M-Mx-Dlo" secondAttribute="bottom" constant="25" id="PyV-wx-j0B"/>
+                            <constraint firstAttribute="centerX" secondItem="dyt-sm-6vO" secondAttribute="centerX" id="SNn-1z-yVe"/>
+                            <constraint firstAttribute="centerX" secondItem="wob-sN-Hti" secondAttribute="centerX" id="TPd-9Z-Vl8"/>
+                            <constraint firstItem="M5m-k7-dtG" firstAttribute="top" secondItem="Ztx-EA-zed" secondAttribute="bottom" constant="25" id="Uik-d6-Fn4"/>
+                            <constraint firstAttribute="centerX" secondItem="0UM-4n-WWO" secondAttribute="centerX" id="Yv3-E0-HN7"/>
+                            <constraint firstItem="6VS-BQ-duB" firstAttribute="top" secondItem="M5m-k7-dtG" secondAttribute="bottom" constant="25" id="c2v-XL-sV8"/>
+                            <constraint firstItem="dyt-sm-6vO" firstAttribute="top" secondItem="0UM-4n-WWO" secondAttribute="bottom" constant="30" id="c9C-SK-2Y4"/>
+                            <constraint firstAttribute="centerX" secondItem="Ztx-EA-zed" secondAttribute="centerX" id="fwH-Ev-Hd8"/>
+                            <constraint firstItem="e5M-Mx-Dlo" firstAttribute="top" secondItem="dyt-sm-6vO" secondAttribute="bottom" constant="30" id="nhn-wA-7fD"/>
+                            <constraint firstAttribute="centerX" secondItem="e5M-Mx-Dlo" secondAttribute="centerX" id="pjs-MR-Jsd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Multiple" id="u1e-5L-l1D"/>
+                    <connections>
+                        <outlet property="dataSourceControl" destination="M5m-k7-dtG" id="v54-CP-sMa"/>
+                        <outlet property="labelA" destination="wob-sN-Hti" id="AOv-pC-JKe"/>
+                        <outlet property="labelB" destination="0UM-4n-WWO" id="hRH-Gi-YKV"/>
+                        <outlet property="labelC" destination="dyt-sm-6vO" id="ebA-D8-FV5"/>
+                        <outlet property="normalDebugMode" destination="6VS-BQ-duB" id="If2-cz-Gdb"/>
+                        <outlet property="rateSlider" destination="Ztx-EA-zed" id="CUW-tS-B3g"/>
+                        <outlet property="scrollTypeControl" destination="e5M-Mx-Dlo" id="USf-x2-cLw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85" y="-788"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aYd-Ah-TmS" kind="relationship" relationship="viewControllers" id="8Eb-ga-166"/>
+                        <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-986" y="-616"/>
+        </scene>
+        <!--Basic Label View Controller - First-->
+        <scene sceneID="6pX-ql-857">
+            <objects>
+                <viewController title="First" id="aYd-Ah-TmS" customClass="BasicLabelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gYF-i5-IdP"/>
+                        <viewControllerLayoutGuide type="bottom" id="z9i-Il-aFO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V3R-bC-K9Q" userLabel="ViewMain">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBC-Sv-f2E" userLabel="LabelA">
+                                <rect key="frame" x="25" y="110" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="KJX-wh-ety"/>
+                                    <constraint firstAttribute="height" constant="30" id="aDO-vm-Gbu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lbj-Sd-8FS" userLabel="SegControl - ScrollType">
+                                <rect key="frame" x="25" y="230" width="270" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="chw-PC-tFC"/>
+                                    <constraint firstAttribute="width" constant="270" id="sM4-Fv-EnI"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Up"/>
+                                    <segment title="Down"/>
+                                    <segment title="Up-Down"/>
+                                    <segment title="None"/>
+                                </segments>
+                                <connections>
+                                    <action selector="scrollDirectionSelectedChanged:" destination="aYd-Ah-TmS" eventType="valueChanged" id="U0I-HF-INV"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NOf-Wg-Y2z" userLabel="SegControl - DataSource">
+                                <rect key="frame" x="70" y="338" width="180" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Oub-gB-qvp"/>
+                                    <constraint firstAttribute="height" constant="28" id="R9h-TK-LWh"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Xoom"/>
+                                    <segment title="Countries"/>
+                                </segments>
+                                <connections>
+                                    <action selector="dataSourceSelectedChanged:" destination="aYd-Ah-TmS" eventType="valueChanged" id="KhK-pL-8Wp"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="kI7-wi-Uhg" userLabel="Rate Slider">
+                                <rect key="frame" x="23" y="283" width="274" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="j46-iR-KxO"/>
+                                    <constraint firstAttribute="width" constant="270" id="vJt-QU-P35"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="aYd-Ah-TmS" eventType="valueChanged" id="2JW-kk-EzF"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kAK-lm-tGx" userLabel="SegControl - DisplayMode">
+                                <rect key="frame" x="70" y="391" width="180" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Debug"/>
+                                </segments>
+                                <connections>
+                                    <action selector="normalDebugModeChanged:" destination="aYd-Ah-TmS" eventType="valueChanged" id="UuH-ey-WZI"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cBC-Sv-f2E" secondAttribute="centerX" id="7Te-96-WEj"/>
+                            <constraint firstItem="NOf-Wg-Y2z" firstAttribute="top" secondItem="kI7-wi-Uhg" secondAttribute="bottom" constant="25" id="J43-zR-XPv"/>
+                            <constraint firstItem="NOf-Wg-Y2z" firstAttribute="width" secondItem="kAK-lm-tGx" secondAttribute="width" id="OJG-fW-POk"/>
+                            <constraint firstItem="kI7-wi-Uhg" firstAttribute="top" secondItem="lbj-Sd-8FS" secondAttribute="bottom" constant="25" id="ZN7-ej-3b3"/>
+                            <constraint firstItem="cBC-Sv-f2E" firstAttribute="top" secondItem="gYF-i5-IdP" secondAttribute="bottom" constant="90" id="aSd-bh-DS5"/>
+                            <constraint firstAttribute="centerX" secondItem="kI7-wi-Uhg" secondAttribute="centerX" id="b7b-6X-Ked"/>
+                            <constraint firstAttribute="centerX" secondItem="NOf-Wg-Y2z" secondAttribute="centerX" id="etT-UH-6Ya"/>
+                            <constraint firstItem="kAK-lm-tGx" firstAttribute="top" secondItem="NOf-Wg-Y2z" secondAttribute="bottom" constant="25" id="liP-XV-Mr6"/>
+                            <constraint firstAttribute="centerX" secondItem="lbj-Sd-8FS" secondAttribute="centerX" id="m80-KP-mbB"/>
+                            <constraint firstAttribute="centerX" secondItem="kAK-lm-tGx" secondAttribute="centerX" id="stb-A6-X6h"/>
+                            <constraint firstItem="lbj-Sd-8FS" firstAttribute="top" secondItem="cBC-Sv-f2E" secondAttribute="bottom" constant="90" id="xPj-Ef-aTe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Basic" id="Mo2-H7-cFG"/>
+                    <connections>
+                        <outlet property="labelA" destination="cBC-Sv-f2E" id="0ey-UO-nQh"/>
+                        <outlet property="rateSlider" destination="kI7-wi-Uhg" id="haR-zF-sTE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ng5-45-QUl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-788"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
